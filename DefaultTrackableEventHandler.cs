@@ -4,6 +4,8 @@ Copyright (c) 2017 PTC Inc. All Rights Reserved.
 Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
 Confidential and Proprietary - Protected under copyright and other laws.
+
+Modifications Hector Bello 20/05/2020 for vuforia 2019
 ==============================================================================*/
 
 using UnityEngine;
@@ -17,7 +19,7 @@ using Vuforia;
 /// </summary>
 public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 {
-    public UnityEngine.Video.VideoPlayer videoPlayer; //added by H.B. sugestion MirImad
+    public UnityEngine.Video.VideoPlayer videoPlayer; //added by H.B. 
 
     #region PROTECTED_MEMBER_VARIABLES
 
@@ -85,7 +87,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected virtual void OnTrackingFound()
     {
-        videoPlayer.Play(); //added by H.B. sugestion MirImad
+        videoPlayer.Play(); //added by H.B.  
 
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
@@ -107,7 +109,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected virtual void OnTrackingLost()
     {
-        videoPlayer.Stop(); //added by H.B. sugestion MirImad
+        videoPlayer.Stop(); //added by H.B.  
         //videoPlayer.Pause(); //added by H.B. sugestion MirImad
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
