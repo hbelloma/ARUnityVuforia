@@ -21,6 +21,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 {
     public UnityEngine.Video.VideoPlayer videoPlayer; //added by H.B. 
     public UnityEngine.Animator anim2; //added by H.B
+    public UnityEngine.AudioSource audio1; // added by H.B
     
     #region PROTECTED_MEMBER_VARIABLES
 
@@ -90,7 +91,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     {
         videoPlayer.Play(); //added by H.B.  
         anim2.Play(""); // added by H.B.
-
+        audio1.Play(); // added by H.B.
+        
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
@@ -111,7 +113,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected virtual void OnTrackingLost()
     {
-        videoPlayer.Stop(); //added by H.B.  
+        videoPlayer.Stop(); //added by H.B.
+        audio1.Stop(); //added by H.B.
+        
         //videoPlayer.Pause(); //added by H.B. sugestion MirImad
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
