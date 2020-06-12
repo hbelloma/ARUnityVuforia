@@ -91,7 +91,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     {
         videoPlayer.Play(); //added by H.B.  
         anim2.Play(""); // added by H.B.
-        audio1.Play(); // added by H.B.
+        //audio1.Play(); // added by H.B.
         
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
@@ -114,7 +114,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     protected virtual void OnTrackingLost()
     {
         videoPlayer.Stop(); //added by H.B.
-        audio1.Stop(); //added by H.B.
+        //audio1.Stop(); //added by H.B.
         
         //videoPlayer.Pause(); //added by H.B. sugestion MirImad
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
