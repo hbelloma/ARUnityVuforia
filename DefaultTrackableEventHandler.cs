@@ -20,8 +20,8 @@ using Vuforia;
 public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 {
     public UnityEngine.Video.VideoPlayer videoPlayer; //added by H.B. 
-    public UnityEngine.Animator anim2; //added by H.B
-    public UnityEngine.AudioSource audio1; // added by H.B
+    //public UnityEngine.Animator anim2; //added by H.B
+    //public UnityEngine.AudioSource audio1; // added by H.B
     
     #region PROTECTED_MEMBER_VARIABLES
 
@@ -90,7 +90,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     protected virtual void OnTrackingFound()
     {
         videoPlayer.Play(); //added by H.B.  
-        anim2.Play(""); // added by H.B.
+        //anim2.Play(""); // added by H.B.
         //audio1.Play(); // added by H.B.
         
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
