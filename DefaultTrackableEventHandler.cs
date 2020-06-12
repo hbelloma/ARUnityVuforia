@@ -134,5 +134,5 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             component.enabled = false;
     }
 
-    #endregion // PROTECTED_METHODS
+    #endregion // PROTECTED_METHHODS
 }
