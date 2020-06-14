@@ -6,9 +6,11 @@ All Rights Reserved.
 Confidential and Proprietary - Protected under copyright and other laws.
 
 Modifications Hector Bello 20/05/2020 for vuforia 2019
+last modification 13/06/2020 
 ==============================================================================*/
 
 using UnityEngine;
+using UnityEngine.UI; //for butons Hector Bello
 using Vuforia;
 
 /// <summary>
@@ -20,8 +22,9 @@ using Vuforia;
 public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 {
     public UnityEngine.Video.VideoPlayer videoPlayer; //added by H.B. 
-    //public UnityEngine.Animator anim2; //added by H.B
+    public UnityEngine.Animator anim2; //added by H.B
     //public UnityEngine.AudioSource audio1; // added by H.B
+    public Transform TheCanvas; //for butons Hector Bello
     
     #region PROTECTED_MEMBER_VARIABLES
 
@@ -38,6 +41,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
+        TheCanvas.gameObject.SetActive(false); //for butons Hector Bello    
     }
 
     protected virtual void OnDestroy()
@@ -108,6 +112,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Enable canvas':
         foreach (var component in canvasComponents)
             component.enabled = true;
+            
+        TheCanvas.gameObject.SetActive(true); //for butons Hector Bello     
     }
 
 
@@ -133,6 +139,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Disable canvas':
         foreach (var component in canvasComponents)
             component.enabled = false;
+        TheCanvas.gameObject.SetActive(false); //for butons Hector Bello
     }
 
     #endregion // PROTECTED_METHHODS
