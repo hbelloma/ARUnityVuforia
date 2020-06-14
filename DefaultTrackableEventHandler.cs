@@ -124,6 +124,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         //audio1.Stop(); //added by H.B.
         
         //videoPlayer.Pause(); //added by H.B. sugestion MirImad
+        
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
