@@ -90,7 +90,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     protected virtual void OnTrackingFound()
     {
         videoPlayer.Play(); //added by H.B.  
-        //anim2.Play(""); // added by H.B.
+        anim2.Play(""); // added by H.B.
         //audio1.Play(); // added by H.B.
         
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
@@ -114,6 +114,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     protected virtual void OnTrackingLost()
     {
         videoPlayer.Stop(); //added by H.B.
+        anim2.enabled=false; //Stop is obsolete 
         //audio1.Stop(); //added by H.B.
         
         //videoPlayer.Pause(); //added by H.B. sugestion MirImad
