@@ -141,6 +141,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         foreach (var component in canvasComponents)
             component.enabled = false;
         TheCanvas.gameObject.SetActive(false); //for butons Hector Bello
+        Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
     }
 
     #endregion // PROTECTED_METHHODS
